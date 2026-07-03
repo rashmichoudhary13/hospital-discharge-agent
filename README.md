@@ -11,9 +11,7 @@ A secure, multi-agent orchestrator built with ADK 2.0 that automates the complet
 4. [How to Run](#-how-to-run)
 5. [Sample Test Cases](#-sample-test-cases)
 6. [Assets](#-assets)
-7. [Demo Script](#-demo-script)
-8. [Troubleshooting](#-troubleshooting)
-9. [Push to GitHub](#-push-to-github)
+7. [Troubleshooting](#-troubleshooting)
 
 ---
 
@@ -135,20 +133,12 @@ Instead of using standard manual commands, you can use the configured shell call
 
 ## 🖼️ Assets
 * **Workflow Architecture Diagram**: ![Workflow Diagram](assets/architecture_diagram.png)
-* **Cover Page Banner**: ![Cover Banner](assets/cover_page_banner.png)
-
----
-
-## 🎙️ Demo Script
-See the complete presentation walkthrough script at [DEMO_SCRIPT.txt](file:///d:/Agentic%20AI%20-%205%20day/capstone/hospital-discharge-agent/DEMO_SCRIPT.txt).
-
----
 
 ## 🔍 Troubleshooting
 
 1. **429 Resource Exhausted / Quota Limits**:
    * **Cause**: Exceeded Gemini 2.5 Flash free tier limits (20 requests/day).
-   * **Fix**: Ensure `GEMINI_MODEL=gemini-2.5-flash-lite` is set in your `.env`. The lite version has a 1,000 requests/day limits.
+   * **Fix**: Ensure `GEMINI_MODEL=gemini-2.5-flash-lite` or `gemini-3.1-flash-lite` is set in your `.env`. The lite version has a 1,000 requests/day limits.
 
 2. **Hot-Reload / Changes Not Appearing on Windows**:
    * **Cause**: Windows event-loop conflicts prevent the web server from capturing module changes.
@@ -160,34 +150,3 @@ See the complete presentation walkthrough script at [DEMO_SCRIPT.txt](file:///d:
 3. **No Agents Found / Directory Error**:
    * **Cause**: Running command from the wrong folder or target folder is misidentified.
    * **Fix**: Ensure your working directory is the root of the project (`hospital-discharge-agent`) and run `uv run adk web app`.
-
----
-
-## 📦 Push to GitHub
-
-1. Create a new repo at https://github.com/new
-   - Name: `hospital-discharge-agent`
-   - Visibility: Public or Private
-   - Do NOT initialize with README (you already have one)
-
-2. In your terminal, navigate into your project folder:
-   ```bash
-   cd hospital-discharge-agent
-   git init
-   git add .
-   git commit -m "Initial commit: hospital-discharge-agent ADK agent"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/hospital-discharge-agent.git
-   git push -u origin main
-   ```
-
-3. Verify `.gitignore` includes:
-   ```text
-   .env          ← your API key — must NEVER be pushed
-   .venv/
-   __pycache__/
-   *.pyc
-   .adk/
-   ```
-
-> ⚠️ **NEVER** push `.env` to GitHub. Your API key will be exposed publicly.
