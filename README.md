@@ -132,7 +132,8 @@ Instead of using standard manual commands, you can use the configured shell call
 ---
 
 ## 🖼️ Assets
-* **Workflow Architecture Diagram**: ![Workflow Diagram](assets/architecture_diagram.png)
+* **Workflow Architecture Diagram**: <br><br> <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/296c34a7-74fc-4764-8a7f-ee644730d87f" />
+
 
 ## 🔍 Troubleshooting
 
